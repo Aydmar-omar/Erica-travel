@@ -25,21 +25,20 @@
             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li><a href="blog.html" class="nav-link">Blog</a></li>
             <li><a href="contact.html" class="nav-link active">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
+                <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
     </nav>
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-close-btn" id="mobileClose">&times;</button>
         <ul>
-            <li><a href="index.html" class="nav-link ">Home</a></li>
-            <li><a href="destination.html" class="nav-link ">Destination</a></li>
-            <li><a href="gallery.html" class="nav-link ">Gallery</a></li>
-            <li><a href="blog.html" class="nav-link ">Blog</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="destination.html" class="nav-link">Destination</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
             <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
     </div>
@@ -124,6 +123,7 @@
 
 
     <script>
+        // Hamburger toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileClose = document.getElementById('mobileClose');
@@ -140,7 +140,7 @@
             document.body.style.overflow = '';
         });
 
-        // Page transition on mobile menu links
+        // Page transitions for mobile menu links
         document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 if (this.href && !this.href.includes('#')) {
