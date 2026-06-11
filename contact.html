@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <h1 class="page-title">Get in <span>Touch</span></h1>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html"><img src="./logo.png.png" class="logo" alt="Logo"></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="destination.html" class="nav-link">Destination</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close-btn" id="mobileClose">&times;</button>
+        <ul>
+            <li><a href="index.html" class="nav-link ">Home</a></li>
+            <li><a href="destination.html" class="nav-link ">Destination</a></li>
+            <li><a href="gallery.html" class="nav-link ">Gallery</a></li>
+            <li><a href="blog.html" class="nav-link ">Blog</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Do you have a question or are planning your next trip? We're here to help!</p>
+            
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@travelworld.com</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+962 7X XXX XXXX</span>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </div>
+<footer class="footer">
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+    </div>
+ <p class="ericacontact">Erica Travel</p>
+ <p class="ericaemail">ericatravel@gmail.com</p>
+    <p>Explore the world with us • Travel World © 2026</p>
+</footer>
+
+</footer>
+</div>
+</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('fade-in');
+
+            const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.href && !this.href.includes('#')) {
+                        e.preventDefault();
+                        const target = this.href;
+
+                        document.body.classList.remove('fade-in');
+                        document.body.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            window.location.href = target;
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        mobileClose.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Page transition on mobile menu links
+        document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.href && !this.href.includes('#')) {
+                    e.preventDefault();
+                    const target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 300);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

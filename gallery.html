@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+    <body>
+    <nav class="navbar">
+    <div class="logo-container"></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="destination.html" class="nav-link">Destination</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+</nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close-btn" id="mobileClose">&times;</button>
+        <ul>
+            <li><a href="index.html" class="nav-link ">Home</a></li>
+            <li><a href="destination.html" class="nav-link ">Destination</a></li>
+            <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+            <li><a href="blog.html" class="nav-link ">Blog</a></li>
+            <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <h1 class="page-title">Visual <span>Journeys</span></h1>
+
+</nav>
+
+
+    <div class="gallery-container">
+    <div class="card">
+        <h2 class="hcard">Hong Kong</h2>
+        <img src="./hong kong.jpg" class="pic" alt="France Image">
+        <p class="pcard">Where skyscrapers embrace the clouds and city lights reflect on the harbor waters.<br> A captivating blend of Eastern heritage and Western modernity, where the vibrant energy of the "Pearl of the Orient" never sleeps.</p>
+    </div>
+    <div class="card">
+        <h2 class="hcard">Rome</h2>
+        <img src="./hongbin-7pZcntYKLO4-unsplash.jpg" class="pic" alt="Italy Image">
+        <p class="pcard">Where the echoes of an empire meet the<br> pulse of the present Beneath the Roman<br> sky, marble and memory intertwine to<br> tell a story of eternal glory As the flag<br> flutters over the sacred domes</p>
+    </div>
+        <div class="card">
+        <h2 class="hcard">Macau</h2>
+        <img src="./macau.jpg" class="pic" alt="Switzerland Image">
+        <p class="pcard">A city of striking contrasts, where classic Portuguese architecture meets the dazzling lights of modern resorts. It's<br> a destination where historic tranquility blends seamlessly with the city's ceaseless bustle.</p>
+        </div>
+        <div class="card">
+        <h2 class="hcard">Moscow</h2>
+        <img src="./russian.jpg" class="pic" alt="Iceland Image">
+        <p class="pcard">Between golden domes that tell tales of tsars and glass skyscrapers that hint at the future, Moscow is a masterpiece of Russian grandeur that sparkles in the sunlight and on enchanting winter nights.</p>
+        </div>
+        <div class="card">
+            <h2 class="hcard">Madrid</h2>
+            <img src="./Madrid (Spain).jpg" class="pic" alt="Chechen Image">
+            <p class="pcard">The beating heart of Spain, brimming with art and life. Beneath the shadows of ancient historical buildings and flags that flutter proudly, Madrid breathes culture and creativity that is evident in every corner of its wide streets.
+        </div>
+            <div class="card">
+                <h2 class="hcard">New Zealand</h2>
+                <img src="./new zlanda.jpg" class="pic" alt="Turkey Image">
+                <p class="pcard">A paradise of unspoiled nature, where snow-capped peaks meet crystal-clear lakes in perfect harmony. It is a land that offers absolute tranquility and invites you to explore untouched beauty, from sunrise to sunset.</p>
+            </div>
+        </div>
+       <footer class="footer">
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+    </div>
+
+    <p>Explore the world with us • Travel World © 2026</p>
+</footer>
+
+
+        <script>document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add('fade-in');
+
+    const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.href && !this.href.includes('#')) {
+                e.preventDefault();
+                const target = this.href;
+
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 300);
+            }
+        });
+    });
+});
+</script>
+
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        mobileClose.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Page transition on mobile menu links
+        document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.href && !this.href.includes('#')) {
+                    e.preventDefault();
+                    const target = this.href;
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => { window.location.href = target; }, 300);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
