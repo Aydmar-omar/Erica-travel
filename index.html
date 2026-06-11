@@ -8,91 +8,182 @@
 </head>
 <body>
     <header class="hero-section">
-    <nav class="navbar">
-    <div class="logo-container">
-    <img src="./logo.png.png" alt="Logo" class="logo">
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="destination.html" class="nav-link">Destination</a></li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="blog.html" class="nav-link">Blog</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <div class="hamburger" id="hamburger">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="./logo.png.png" alt="Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="destination.html" class="nav-link">Destination</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-    </nav>
-    <!-- Mobile Menu -->
+        </nav>
+    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-close-btn" id="mobileClose">&times;</button>
+        <div class="mobile-menu-brand">
+            <img src="./logo.png.png" class="mobile-logo" alt="Logo">
+        </div>
         <ul>
-            <li><a href="index.html" class="nav-link active">Home</a></li>
-            <li><a href="destination.html" class="nav-link">Destination</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="blog.html" class="nav-link">Blog</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="destination.html" class="nav-link"><i class="fas fa-map-location-dot"></i><span>Destination</span></a></li>
+            <li><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i><span>Gallery</span></a></li>
+            <li><a href="blog.html" class="nav-link"><i class="fas fa-newspaper"></i><span>Blog</span></a></li>
+            <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
         </ul>
+        <div class="mobile-menu-footer">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+        </div>
     </div>
 
-    <div class="hero-content">
-        <h1>Looking For <span>Adventure</span> with Erika?</h1>
-        <p>Explore the world, one vlog at a time. Join the journey and discover breathtaking destinations.</p>
-        <a href="https://www.youtube.com/" class="cta-btn">Watch Latest Vlog</a>
-    </div>
-</header>
-</div>
-   <footer class="footer">
+        <div class="hero-content">
+            <h1>Looking For <span>Adventure</span> with Erika?</h1>
+            <p>Explore the world, one vlog at a time. Join the journey and discover breathtaking destinations.</p>
+            <a href="https://www.youtube.com/" class="cta-btn">Watch Latest Vlog</a>
+        </div>
+    </header>
 
-```
-<div class="footer-divider"></div>
+    <!-- ===== STATS / MOST VISITED BAR SECTION ===== -->
+    <section class="stats-section">
+        <div class="stats-inner">
+            <div class="stats-title-wrap">
+                <span class="stats-label"><i class="fas fa-chart-bar"></i> Most Visited <span>Destinations</span></span>
+                <p class="stats-sub">Based on our community's travel data</p>
+            </div>
+            <div class="stats-bars">
+                <div class="stat-row" style="--delay:0s">
+                    <a href="destination.html" class="stat-name"><img src="./new zlanda.jpg" class="stat-flag"> New Zealand</a>
+                    <div class="stat-bar-wrap"><div class="stat-bar" style="--pct:92%;--color:#ff9f1c"></div></div>
+                    <span class="stat-pct">92%</span>
+                </div>
+                <div class="stat-row" style="--delay:0.1s">
+                    <a href="destination.html" class="stat-name"><img src="./hong kong.jpg" class="stat-flag"> Hong Kong</a>
+                    <div class="stat-bar-wrap"><div class="stat-bar" style="--pct:84%;--color:#38bdf8"></div></div>
+                    <span class="stat-pct">84%</span>
+                </div>
+                <div class="stat-row" style="--delay:0.2s">
+                    <a href="destination.html" class="stat-name"><img src="./hongbin-7pZcntYKLO4-unsplash.jpg" class="stat-flag"> Rome, Italy</a>
+                    <div class="stat-bar-wrap"><div class="stat-bar" style="--pct:76%;--color:#a78bfa"></div></div>
+                    <span class="stat-pct">76%</span>
+                </div>
+                <div class="stat-row" style="--delay:0.3s">
+                    <a href="destination.html" class="stat-name"><img src="./Madrid (Spain).jpg" class="stat-flag"> Madrid</a>
+                    <div class="stat-bar-wrap"><div class="stat-bar" style="--pct:65%;--color:#34d399"></div></div>
+                    <span class="stat-pct">65%</span>
+                </div>
+                <div class="stat-row" style="--delay:0.4s">
+                    <a href="destination.html" class="stat-name"><img src="./macau.jpg" class="stat-flag"> Macau</a>
+                    <div class="stat-bar-wrap"><div class="stat-bar" style="--pct:58%;--color:#f472b6"></div></div>
+                    <span class="stat-pct">58%</span>
+                </div>
+                <div class="stat-row" style="--delay:0.5s">
+                    <a href="destination.html" class="stat-name"><img src="./russian.jpg" class="stat-flag"> Moscow</a>
+                    <div class="stat-bar-wrap"><div class="stat-bar" style="--pct:47%;--color:#fb923c"></div></div>
+                    <span class="stat-pct">47%</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="footer-social">
-    <a href="https://www.instagram.com/">
-        <i class="fab fa-instagram"></i>
-    </a>
+    <!-- ===== FEATURED DESTINATIONS SECTION ===== -->
+    <section class="featured-section">
+        <h2 class="section-heading featured-title"><i class="fas fa-map-marker-alt"></i> Most Visited <span>Destinations</span></h2>
+        <p class="featured-subtitle">The places our community loves the most — click to explore</p>
 
-    <a href="https://www.facebook.com/">
-        <i class="fab fa-facebook-f"></i>
-    </a>
+        <div class="featured-grid">
 
-    <a href="https://www.twitter.com/">
-        <i class="fab fa-x-twitter"></i>
-    </a>
+            <a href="destination.html#new-zealand" class="featured-card big-card" style="background-image: url('./new zlanda.jpg')">
+                <div class="featured-overlay">
+                    <span class="featured-rank">#1</span>
+                    <h3>New Zealand</h3>
+                    <p>Land of breathtaking landscapes & outdoor adventures</p>
+                    <span class="featured-explore">Explore →</span>
+                </div>
+            </a>
 
-    <a href="https://www.snapchat.com/">
-        <i class="fab fa-snapchat-ghost"></i>
-    </a>
-</div>
+            <a href="destination.html#hong-kong" class="featured-card" style="background-image: url('./hong kong.jpg')">
+                <div class="featured-overlay">
+                    <span class="featured-rank">#2</span>
+                    <h3>Hong Kong</h3>
+                    <p>Where East meets West in a stunning skyline</p>
+                    <span class="featured-explore">Explore →</span>
+                </div>
+            </a>
 
-<p>Explore the world with us • Travel World © 2026</p>
-```
+            <a href="destination.html#rome" class="featured-card" style="background-image: url('./hongbin-7pZcntYKLO4-unsplash.jpg')">
+                <div class="featured-overlay">
+                    <span class="featured-rank">#3</span>
+                    <h3>Rome, Italy</h3>
+                    <p>History, art, and cuisine in the Eternal City</p>
+                    <span class="featured-explore">Explore →</span>
+                </div>
+            </a>
 
-</footer>
+            <a href="destination.html#madrid" class="featured-card" style="background-image: url('./Madrid (Spain).jpg')">
+                <div class="featured-overlay">
+                    <span class="featured-rank">#4</span>
+                    <h3>Madrid, Spain</h3>
+                    <p>Vibrant culture, art, and world-class architecture</p>
+                    <span class="featured-explore">Explore →</span>
+                </div>
+            </a>
 
+            <a href="destination.html#macau" class="featured-card" style="background-image: url('./macau.jpg')">
+                <div class="featured-overlay">
+                    <span class="featured-rank">#5</span>
+                    <h3>Macau</h3>
+                    <p>The Las Vegas of Asia with Portuguese heritage</p>
+                    <span class="featured-explore">Explore →</span>
+                </div>
+            </a>
 
+        </div>
 
-<script>document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add('fade-in');
-    const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (this.href && !this.href.includes('#')) {
-                e.preventDefault();
-                const target = this.href;
-                document.body.classList.remove('fade-in');
-                document.body.classList.add('fade-out');
-                setTimeout(() => {
-                    window.location.href = target;
-                }, 500);
-            }
-        });
-    });
-});</script>
+        <div style="text-align:center; margin-top: 40px;">
+            <a href="destination.html" class="cta-btn">View All Destinations</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.snapchat.com/"><i class="fab fa-snapchat-ghost"></i></a>
+        </div>
+        <p>Explore the world with us • Travel World © 2026</p>
+    </footer>
 
     <script>
-        // Hamburger toggle
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('fade-in');
+            const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.href && !this.href.includes('#')) {
+                        e.preventDefault();
+                        const target = this.href;
+                        document.body.classList.remove('fade-in');
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => { window.location.href = target; }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileClose = document.getElementById('mobileClose');
@@ -109,7 +200,7 @@
             document.body.style.overflow = '';
         });
 
-        // Page transitions for mobile menu links
+        // Page transition on mobile menu links
         document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 if (this.href && !this.href.includes('#')) {
