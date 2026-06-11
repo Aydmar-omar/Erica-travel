@@ -601,317 +601,7 @@ body {
     font-weight: bold;
 }
 /* ==========================================================================
-   9. Most Watched Section (Blog Page)
-   ========================================================================== */
-.section-heading {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
-}
-
-.section-heading span {
-    color: #ff9f1c;
-}
-
-.most-watched-section {
-    margin-top: 80px;
-    padding: 0 20px;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-}
-
-.most-watched-card {
-    display: flex;
-    gap: 40px;
-    background: rgba(255,255,255,0.07);
-    border: 2px solid #ff9f1c;
-    border-radius: 20px;
-    padding: 30px;
-    backdrop-filter: blur(8px);
-    transition: 0.3s;
-}
-
-.most-watched-card:hover {
-    background: rgba(255,255,255,0.13);
-    box-shadow: 0 0 30px rgba(255,159,28,0.3);
-}
-
-.most-watched-thumbnail {
-    flex: 1.2;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    min-height: 250px;
-}
-
-.most-watched-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.most-watched-thumbnail:hover img {
-    transform: scale(1.05);
-}
-
-.play-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-.play-overlay i {
-    font-size: 4rem;
-    color: white;
-    opacity: 0.85;
-    transition: 0.3s;
-}
-
-.most-watched-thumbnail:hover .play-overlay {
-    background: rgba(0,0,0,0.15);
-}
-
-.most-watched-thumbnail:hover .play-overlay i {
-    color: #ff9f1c;
-    transform: scale(1.1);
-}
-
-.most-watched-info {
-    flex: 1;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-}
-
-.badge-hot {
-    display: inline-block;
-    background: #ff9f1c;
-    color: white;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    width: fit-content;
-}
-
-.most-watched-info h3 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-}
-
-.most-watched-info p {
-    opacity: 0.85;
-    line-height: 1.7;
-    font-size: 1rem;
-}
-
-.watched-stats {
-    display: flex;
-    gap: 20px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.watched-stats span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.watched-stats i {
-    color: #ff9f1c;
-}
-
-/* Blog container padding fix */
-.blog-container {
-    padding-top: 110px;
-    padding-bottom: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.blog-info {
-    padding: 20px;
-    color: white;
-}
-
-.blog-info h2 {
-    font-size: 1.2rem;
-    margin: 8px 0;
-}
-
-.blog-info p {
-    font-size: 0.95rem;
-    opacity: 0.8;
-    line-height: 1.6;
-}
-
-.blog-img {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-}
-
-.blog-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.blog-card:hover .blog-img img {
-    transform: scale(1.05);
-}
-
-.date {
-    font-size: 0.8rem;
-    opacity: 0.6;
-}
-
-/* ==========================================================================
-   10. Featured Destinations Section (Home Page)
-   ========================================================================== */
-.featured-section {
-    padding: 80px 40px 60px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.featured-title {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.featured-subtitle {
-    text-align: center;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 40px;
-    font-size: 1rem;
-}
-
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 280px 280px;
-    gap: 16px;
-}
-
-.featured-card {
-    border-radius: 18px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: block;
-    text-decoration: none;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-}
-
-.featured-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-.big-card {
-    grid-column: span 2;
-}
-
-.featured-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.78) 40%, transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 25px;
-    color: white;
-    transition: 0.3s;
-}
-
-.featured-card:hover .featured-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.88) 50%, rgba(0,0,0,0.1) 100%);
-}
-
-.featured-rank {
-    display: inline-block;
-    background: #ff9f1c;
-    color: white;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 3px 10px;
-    border-radius: 12px;
-    margin-bottom: 8px;
-    width: fit-content;
-}
-
-.featured-overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.featured-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: 10px;
-}
-
-.featured-explore {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #ff9f1c;
-    opacity: 0;
-    transform: translateX(-8px);
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.featured-card:hover .featured-explore {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .featured-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-    .big-card {
-        grid-column: span 2;
-    }
-    .most-watched-card {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 600px) {
-    .featured-grid {
-        grid-template-columns: 1fr;
-    }
-    .big-card {
-        grid-column: span 1;
-    }
-    .blog-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ==========================================================================
-   11. Hamburger Menu & Mobile Navigation
+   HAMBURGER MENU & MOBILE NAV
    ========================================================================== */
 
 .hamburger {
@@ -919,12 +609,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     width: 44px;
     height: 44px;
     cursor: pointer;
     z-index: 3000;
-    position: relative;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hamburger span {
@@ -937,32 +630,34 @@ body {
     transform-origin: center;
 }
 
-/* X animation when open */
 .hamburger.open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
 }
 .hamburger.open span:nth-child(2) {
     opacity: 0;
     transform: scaleX(0);
 }
 .hamburger.open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Mobile overlay menu */
+/* Mobile full-screen overlay menu */
 .mobile-menu {
     display: none;
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 2500;
-    background: rgba(10, 20, 40, 0.97);
-    backdrop-filter: blur(16px);
+    background: rgba(8, 18, 38, 0.97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
 }
 
 .mobile-menu.open {
@@ -977,7 +672,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     width: 100%;
 }
 
@@ -985,79 +680,61 @@ body {
     display: block;
     text-decoration: none;
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 14px 50px;
+    padding: 16px 60px;
     border-radius: 50px;
     text-align: center;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    position: relative;
 }
 
-.mobile-menu ul li a::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50px;
-    background: rgba(255, 159, 28, 0);
-    transition: background 0.3s ease;
-}
-
-.mobile-menu ul li a:hover::before,
-.mobile-menu ul li a.active::before {
-    background: rgba(255, 159, 28, 0.2);
-}
-
+.mobile-menu ul li a:hover,
 .mobile-menu ul li a.active {
     color: #ff9f1c;
-}
-
-.mobile-menu ul li a:hover {
-    color: #ff9f1c;
-    transform: scale(1.05);
+    background: rgba(255, 159, 28, 0.12);
 }
 
 .mobile-close-btn {
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 25px;
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
     line-height: 1;
+    padding: 5px 10px;
 }
 
 /* ==========================================================================
-   12. Full Mobile Responsive Styles (max-width: 768px)
+   FULL MOBILE RESPONSIVE (max-width: 768px)
    ========================================================================== */
 @media (max-width: 768px) {
 
-    /* Show hamburger, hide desktop nav links */
+    /* Show hamburger */
     .hamburger {
         display: flex;
-        position: absolute;
-        right: 25px;
-        top: 22px;
     }
 
+    /* Hide desktop nav */
     .nav-links {
         display: none !important;
     }
 
-    /* Navbar adjustments */
+    /* Navbar */
     .navbar {
-        padding: 15px 20px;
+        padding: 0 20px;
         height: 70px;
+        position: relative;
     }
 
     .logo {
-        width: 160px;
-        top: 18px;
-        left: -40px;
+        width: 150px;
+        top: 15px;
+        left: -30px;
     }
 
     .logo-container {
@@ -1065,22 +742,22 @@ body {
     }
 
     /* Hero */
-    .hero-content {
-        width: 90%;
-    }
-
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.3;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .hero-content {
+        width: 90%;
     }
 
     .cta-btn {
         padding: 14px 28px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     /* Featured grid (home) */
@@ -1089,22 +766,22 @@ body {
     }
 
     .featured-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .featured-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 14px;
+        gap: 12px;
     }
 
     .featured-card {
-        height: 220px;
+        height: 210px;
     }
 
     .big-card {
         grid-column: span 1;
-        height: 260px;
+        height: 250px;
     }
 
     /* Gallery */
@@ -1115,7 +792,7 @@ body {
         padding-right: 16px;
     }
 
-    /* Destinations page */
+    /* Destinations */
     .dest-section,
     .dest-section.reverse {
         flex-direction: column;
@@ -1124,11 +801,11 @@ body {
     }
 
     .dest-image {
-        height: 230px;
+        height: 220px;
     }
 
     .dest-content h2 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .dest-page-container {
@@ -1192,13 +869,160 @@ body {
         font-size: 18px;
     }
 
-    /* ericacontact fix */
-    .ericacontact, .ericaemail {
+    .ericacontact,
+    .ericaemail {
         position: static;
         text-align: center;
     }
 
     .section-heading {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
+
+/* ==========================================================================
+   BLOG EXTRA STYLES
+   ========================================================================== */
+.blog-container {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-heading {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+.section-heading span { color: #ff9f1c; }
+
+.most-watched-section {
+    max-width: 1100px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+}
+
+.most-watched-card {
+    display: flex;
+    gap: 40px;
+    background: rgba(255,255,255,0.07);
+    border: 2px solid #ff9f1c;
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+}
+.most-watched-card:hover {
+    background: rgba(255,255,255,0.13);
+    box-shadow: 0 0 30px rgba(255,159,28,0.3);
+}
+
+.most-watched-thumbnail {
+    flex: 1.2;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    min-height: 250px;
+}
+.most-watched-thumbnail img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.most-watched-thumbnail:hover img { transform: scale(1.05); }
+
+.play-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.3); transition: 0.3s;
+}
+.play-overlay i { font-size: 4rem; color: white; opacity: 0.85; transition: 0.3s; }
+.most-watched-thumbnail:hover .play-overlay { background: rgba(0,0,0,0.15); }
+.most-watched-thumbnail:hover .play-overlay i { color: #ff9f1c; transform: scale(1.1); }
+
+.most-watched-info {
+    flex: 1; color: white;
+    display: flex; flex-direction: column;
+    justify-content: center; gap: 12px;
+}
+.badge-hot {
+    display: inline-block; background: #ff9f1c; color: white;
+    padding: 6px 16px; border-radius: 20px;
+    font-size: 0.85rem; font-weight: bold; width: fit-content;
+}
+.most-watched-info h3 { font-size: 1.8rem; line-height: 1.3; }
+.most-watched-info p { opacity: 0.85; line-height: 1.7; font-size: 1rem; }
+
+.watched-stats {
+    display: flex; gap: 20px; font-size: 0.9rem; opacity: 0.8;
+}
+.watched-stats span { display: flex; align-items: center; gap: 6px; }
+.watched-stats i { color: #ff9f1c; }
+
+.blog-info { padding: 20px; color: white; }
+.blog-info h2 { font-size: 1.2rem; margin: 8px 0; }
+.blog-info p { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; }
+.blog-img { position: relative; height: 220px; overflow: hidden; }
+.blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.blog-card:hover .blog-img img { transform: scale(1.05); }
+.date { font-size: 0.8rem; opacity: 0.6; }
+
+/* ==========================================================================
+   FEATURED SECTION (Home Page)
+   ========================================================================== */
+.featured-section {
+    padding: 80px 40px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.featured-title { font-size: 2.2rem; text-align: center; margin-bottom: 10px; }
+.featured-subtitle {
+    text-align: center; color: rgba(255,255,255,0.7);
+    margin-bottom: 40px; font-size: 1rem;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 280px 280px;
+    gap: 16px;
+}
+.featured-card {
+    border-radius: 18px; overflow: hidden;
+    background-size: cover; background-position: center;
+    position: relative; display: block; text-decoration: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.featured-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.big-card { grid-column: span 2; }
+
+.featured-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.78) 40%, transparent 100%);
+    display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 25px;
+    color: white; transition: 0.3s;
+}
+.featured-card:hover .featured-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 50%, rgba(0,0,0,0.1) 100%);
+}
+.featured-rank {
+    display: inline-block; background: #ff9f1c; color: white;
+    font-size: 0.75rem; font-weight: bold;
+    padding: 3px 10px; border-radius: 12px;
+    margin-bottom: 8px; width: fit-content;
+}
+.featured-overlay h3 { font-size: 1.5rem; margin-bottom: 5px; }
+.featured-overlay p { font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px; }
+.featured-explore {
+    font-size: 0.9rem; font-weight: bold; color: #ff9f1c;
+    opacity: 0; transform: translateX(-8px);
+    transition: all 0.3s ease; display: inline-block;
+}
+.featured-card:hover .featured-explore { opacity: 1; transform: translateX(0); }
